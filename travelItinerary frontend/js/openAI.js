@@ -1,12 +1,13 @@
+
 function encryptToken(token) {
-    return btoa(token.split('').map(char => String.fromCharCode(char.charCodeAt(0) + 5)).join(''));
+    return btoa(token.split('').map(char => String.fromCharCode(char.charCodeAt(0) + 9)).join(''));
 }
 
 function decryptToken(encrypted) {
-    return atob(encrypted).split('').map(char => String.fromCharCode(char.charCodeAt(0) - 5)).join('');
+    return atob(encrypted).split('').map(char => String.fromCharCode(char.charCodeAt(0) - 9)).join('');
 }
 
-const ENCRYPTED_GITHUB_TOKEN = "bG11ZFRnVEY9a1FwcWd5On19VU83NUhebnF1TkZSOEZTTDg3a3hXcg==";
+const ENCRYPTED_GITHUB_TOKEN = "cHJ9cX5raHlqfWg6OkpAUl1RW0o5U4FcQnE/XDpwcXd+aDpRb2pvSkJTVH8+dXFPdHJweV1RS0tPcT9YdVpRfXdMb1pqXkByWmt9bGtWU1JfQDtTYHpRbVpdUWBr";
 const ENDPOINT = "https://models.github.ai/inference";
 const MODEL = "openai/gpt-4.1";
 
@@ -35,7 +36,7 @@ async function callGitHubAI(prompt) {
             throw new Error(`API call failed: ${response.status} ${response.statusText}`);
         }
 
-        const data = await response.json();
+        const data = await response.json();//parsing into json
         
         if (data.choices && data.choices.length > 0) {
             return data.choices[0].message.content;
