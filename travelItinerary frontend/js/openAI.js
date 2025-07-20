@@ -39,7 +39,7 @@ async function callGitHubAI(prompt) {
         const data = await response.json();//parsing into json
         
         if (data.choices && data.choices.length > 0) {
-            return data.choices[0].message.content;
+            return data.choices[0].message.content;////returning chatgpt response 
         } else {
             throw new Error('No response content received from API');
         }
