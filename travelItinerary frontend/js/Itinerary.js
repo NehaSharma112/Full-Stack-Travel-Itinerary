@@ -74,7 +74,7 @@ class ItineraryService{
                         'Content-Type':'application/json',
                         'Authorization':`Bearer ${authToken}`
                     },
-                    body:JSON.stringify(requestBody);
+                    body:JSON.stringify(requestBody)
                 },
             );
 

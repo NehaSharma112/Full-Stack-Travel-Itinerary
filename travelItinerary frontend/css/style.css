@@ -3,3 +3,21 @@
     margin-top: 1rem;
     max-height: 250px;
 }
+.navbar{
+    background-color: #79C2D0 !important;
+}
+.outerContainer{
+    /* background-color: #e9e9eb !important; */
+    /* background: linear-gradient(135deg, #a199c9 0%, #cda1bc 100%) !important; */
+    /* background: linear-gradient(to bottom, #B2E4DB 0%, #FBE8C6 100%); !important; */
+    background: linear-gradient(to bottom, #AEE6E6, #FDF5E6) !important;
+
+    
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+.logo{
+    max-height: 100rem !important;  /* About 40px */
+  width: auto;
+}

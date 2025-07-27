@@ -217,7 +217,7 @@ async function performVoiceSearch(){
     if(query.trim()){
         showLoadingState();
         try{
-            const aiResponse = await = generateTripSuggestions(query);
+            const aiResponse = await generateTripSuggestions(query);
             showResults(`<h4>Search Results for: "${query}"</h4><br>${aiResponse}`);
         }catch(error){
             showResults(`<h4>Search Results for: "${query}"</h4><br><p>Here are some general suggestions for your trip...</p>`);

@@ -154,17 +154,17 @@ const auth={
             alert('Google authentication failed: ' + error.message);
         }
     },
-    function normalizeGoogleUser(googleUser) {
-    return {
-        id: googleUser.id,
-        email: googleUser.email,
-        firstName: googleUser.given_name,
-        lastName: googleUser.family_name,
-        fullName: googleUser.name,
-        userName: googleUser.email?.split('@')[0] || '',
-        picture: googleUser.picture || '',
-    };
-}
+    // function normalizeGoogleUser(googleUser) {
+    // return {
+    //     id: googleUser.id,
+    //     email: googleUser.email,
+    //     firstName: googleUser.given_name,
+    //     lastName: googleUser.family_name,
+    //     fullName: googleUser.name,
+    //     userName: googleUser.email?.split('@')[0] || '',
+    //     picture: googleUser.picture || '',
+    // };
+// }
 
     async login(emailOrUsername, password){
         const isEmail = emailOrUsername.includes('@');
