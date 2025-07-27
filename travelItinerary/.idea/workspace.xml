@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8288140-ce6a-46e5-92cc-22b68b74d648" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Controller/MailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Dto/EmailRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Dto/PaymentRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Dto/SignUpRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Services/CustomUserDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Services/EmailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Services/JwtHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travelItinerary/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/travelItinerary/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Controller/TokenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Controller/TokenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travelItinerary/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/travelItinerary/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="e8288140-ce6a-46e5-92cc-22b68b74d648" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,17 +35,20 @@
     <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2zbEZRgEfi2ru8SsmBcI0Bg5FG7" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Neha/Desktop/Full Stack travel itinerary project/travelItinerary/keys"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Neha/Desktop/Full Stack travel itinerary project/travelItinerary/keys&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Neha\Desktop\Full Stack travel itinerary project\travelItinerary\keys" />
