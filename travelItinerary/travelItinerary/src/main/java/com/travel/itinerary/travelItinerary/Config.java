@@ -22,7 +22,7 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 @EnableWebSecurity
 public class Config {
     private final JwtAuthFilter jwtAuthFilter;
-//    private final CustomUserDetailsService userDetailsService;
+    private final CustomUserDetailsService userDetailsService;
 
 //    public SecurityConfig(JwtAuthFilter jwtAuthFilter, CustomUserDetailsService userDetailsService) {
 //        this.jwtAuthFilter = jwtAuthFilter;
