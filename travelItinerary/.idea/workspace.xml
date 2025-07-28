@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8288140-ce6a-46e5-92cc-22b68b74d648" name="Changes" comment="" />
+    <list default="true" id="e8288140-ce6a-46e5-92cc-22b68b74d648" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelItinerary/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/travelItinerary/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Controller/ItineraryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Controller/ItineraryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Dto/ItineraryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Dto/ItineraryRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Dto/PaymentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Dto/PaymentRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Dto/PaymentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Dto/PaymentResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Repository/ItineraryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/travelItinerary/src/main/java/com/travel/itinerary/travelItinerary/Repository/ItineraryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelItinerary/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/travelItinerary/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +43,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2zbEZRgEfi2ru8SsmBcI0Bg5FG7" />
   <component name="ProjectLevelVcsManager">
@@ -53,6 +64,26 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Neha\Desktop\Full Stack travel itinerary project\travelItinerary\keys" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="TravelItineraryApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.travel.itinerary.travelItinerary.TravelItineraryApplication" />
+      <module name="travelItinerary" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.travel.itinerary.travelItinerary.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TravelItineraryApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

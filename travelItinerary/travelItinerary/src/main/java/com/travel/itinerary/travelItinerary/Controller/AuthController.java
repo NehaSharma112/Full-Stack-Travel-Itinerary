@@ -1,11 +1,13 @@
 package com.travel.itinerary.travelItinerary.Controller;
 
 import com.travel.itinerary.travelItinerary.Dto.*;
+import com.travel.itinerary.travelItinerary.Model.User;
 import com.travel.itinerary.travelItinerary.Services.UserService;
 import jakarta.validation.Valid;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.coyote.BadRequestException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,6 +22,8 @@ import java.util.logging.Logger;
 public class AuthController {
     private final UserService userService;
     Logger logger = Logger.getLogger(String.valueOf(AuthController.class));
+//    @Autowired
+//    UserService userService;
 
     @PostMapping("/signup")
     public ResponseEntity<ApiResponse<AuthResponse>> signup(@Valid @RequestBody SignUpRequest signUpRequest){
@@ -46,10 +50,10 @@ public class AuthController {
     }
 
     @GetMapping("/profile")
-    public ResponseEntity<ApiResponse<AuthResponse>> getProfile(@Valid @RequestBody UserProfileRequest userProfileRequest){
+    public ResponseEntity<ApiResponse<User>> getProfile(@Valid @RequestBody UserProfileRequest userProfileRequest){
         try{
-            AuthResponse authResponse = userService.getProfile(userProfileRequest);
-            return ResponseEntity.ok(ApiResponse.success("Profile fetched ",authResponse ));
+            User user = userService.getUserByUserName(userProfileRequest);
+            return ResponseEntity.ok(ApiResponse.success("Profile fetched ",user ));
         }catch(RuntimeException e){
             logger.log(Level.INFO, "Error while fetching profile " + e.getMessage());
             return ResponseEntity.badRequest().body(ApiResponse.error(e.getMessage()));
