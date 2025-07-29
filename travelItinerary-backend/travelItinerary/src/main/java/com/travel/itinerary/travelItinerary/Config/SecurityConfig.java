@@ -1,8 +1,10 @@
-package com.travel.itinerary.travelItinerary;
+package com.travel.itinerary.travelItinerary.Config;
 
 import com.travel.itinerary.travelItinerary.Security.JwtAuthFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import com.travel.itinerary.travelItinerary.Services.CustomUserDetailService;
+
 
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -20,14 +22,14 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 
 @Configuration
 @EnableWebSecurity
-public class Config {
+public class SecurityConfig {
     private final JwtAuthFilter jwtAuthFilter;
-    private final CustomUserDetailsService userDetailsService;
+    private final CustomUserDetailService userDetailsService;
 
-//    public SecurityConfig(JwtAuthFilter jwtAuthFilter, CustomUserDetailsService userDetailsService) {
-//        this.jwtAuthFilter = jwtAuthFilter;
-//        this.userDetailsService = userDetailsService;
-//    }
+    public SecurityConfig(JwtAuthFilter jwtAuthFilter, CustomUserDetailService userDetailsService) {
+        this.jwtAuthFilter = jwtAuthFilter;
+        this.userDetailsService = userDetailsService;
+    }
 
 
     @Bean
