@@ -6,12 +6,13 @@ import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.en.PorterStemFilter;
 import org.apache.lucene.analysis.standard.StandardTokenizer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
-
+@Service
 public class TextProcessingService {
     private final Analyzer analyzer;//sets the rule and prvides tokenStream
 
@@ -20,6 +21,7 @@ public class TextProcessingService {
         analyzer = new Analyzer() {
             @Override
             protected TokenStreamComponents createComponents(String s) {
+
                 StandardTokenizer tokenizer = new StandardTokenizer();//splits the sentence into words
                 TokenStream filter = new LowerCaseFilter(tokenizer);//converts in lower case
                 filter = new PorterStemFilter(filter);//converts words into its root word

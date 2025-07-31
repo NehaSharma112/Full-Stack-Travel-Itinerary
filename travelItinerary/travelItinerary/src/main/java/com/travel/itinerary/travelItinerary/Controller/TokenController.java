@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 
 @RestController
 @RequestMapping("/api/token")
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
 @RequiredArgsConstructor
 @Slf4j
 public class TokenController {

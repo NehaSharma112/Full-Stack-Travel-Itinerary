@@ -85,7 +85,7 @@ const auth={
         }
     },
 
-    // Handle case when Google Sign-In is not available     in case of failure of google sign in
+    // Handle case when Google Sign-In is not available, in case of failure of google sign in
     handleGoogleNotAvailable() {
         console.warn('Google Sign-In not available');
         
@@ -168,9 +168,19 @@ const auth={
 
     async login(emailOrUsername, password){
         const isEmail = emailOrUsername.includes('@');
-        const loginData = isEmail ? {email : emailOrUsername, password}:{userName : emailOrUsername, password};
+        // const loginData = isEmail ? {email : emailOrUsername, password}:{username : emailOrUsername, password};
+        const loginData = {
+            email: isEmail ? emailOrUsername : "",
+            username: !isEmail ? emailOrUsername : "",
+            password: password
+        };
 //fetch(input: RequestInfo | URL, init?: RequestInit): Promise<Response>;
-        const response= await fetch('${Auth_Api}/login',
+        // console.log("this much is okkk");
+
+        const fullurl = `${Auth_Api}/login`;
+        console.log("Final login URL being hit:", fullurl);
+
+        const response= await fetch(`${Auth_Api}/login`,
             {
                 method : 'POST',
                 headers : { 'Content-Type': 'application/json' },
@@ -178,18 +188,26 @@ const auth={
             }
         );
 
-        const data = await response.json();
+    
+        // const data = await response.json();
+
+        let data = {};
+        try {
+            data = await response.json();
+        } catch (e) {
+            console.error("Failed to parse response JSON", e);
+        }
 
         if(response.ok){
-            localStorage.setItem('JWT_TOKEN', data.token);
+            localStorage.setItem('JWT_TOKEN', data.data.token);
             localStorage.setItem('CURRENT_USER',JSON.stringify(
                 {
-                    id: data.id,
-                    userName: data.userName,
-                    email: data.email,
-                    firstName: data.firstName,
-                    lastName: data.lastName,
-                    role: data.role
+                    id: data.data.id,
+                    userName: data.data.userName,
+                    email: data.data.email,
+                    firstName: data.data.firstName,
+                    lastName: data.data.lastName,
+                    role: data.data.role
                 }
             ));
             return data;
@@ -201,13 +219,13 @@ const auth={
 
 
     async signup(userdata){
-        const response = await fetch('${Auth_Api}/signup',
+        const response = await fetch(`${Auth_Api}/signup`,
             {
                 method : 'POST',
                 headers:{'Content-Type':'application/json'},
                 body : JSON.stringify(
                     {
-                        usename: userdata.email,
+                        username: userdata.email,
                         email:userdata.email,
                         password: userdata.password,
                         firstName:userdata.firstName,
@@ -217,8 +235,9 @@ const auth={
             }
         );
 
-        const data = await response.json();
+        const result = await response.json();
         if(response.ok){
+            const data = result.data;
             localStorage.setItem('JWT_TOKEN', data.token);
             localStorage.setItem('CURRENT_USER',JSON.stringify(
                 {
@@ -258,7 +277,8 @@ const auth={
         return localStorage.getItem('JWT_TOKEN') !== null;//if not nulll then return true
     },
 
-    getCrrentUser(){
+    getCurrentUser(){
+        console.log("this is getting current user");
         const user = localStorage.getItem('CURRENT_USER');
         return user ? JSON.parse(user): null;
     },

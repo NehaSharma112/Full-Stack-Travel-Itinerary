@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+travellinerary/src/main/resources/application.properties
+.env
+.idea/
+target/

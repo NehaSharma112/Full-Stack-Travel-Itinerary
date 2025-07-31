@@ -14,7 +14,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @RestController
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
 @RequestMapping("/api/auth")
 @Slf4j//for logger
 @RequiredArgsConstructor
@@ -26,6 +26,7 @@ public class AuthController {
 
     @PostMapping("/signup")
     public ResponseEntity<ApiResponse<AuthResponse>> signup(@Valid @RequestBody SignUpRequest signUpRequest){
+        System.out.println("Request comes here");
         try{
             AuthResponse authResponse = userService.signup(signUpRequest);
             return ResponseEntity.ok(ApiResponse.success("User Registered Successfully ",authResponse ));
@@ -38,6 +39,7 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<ApiResponse<AuthResponse>> login(@Valid @RequestBody LoginRequest loginRequest){
+        System.out.println("api hits");
         try{
             AuthResponse authResponse = userService.login(loginRequest);
             return ResponseEntity.ok(ApiResponse.success("User Logged in Successfully ",authResponse ));

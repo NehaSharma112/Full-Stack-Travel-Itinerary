@@ -21,7 +21,7 @@ import java.util.List;
 @RequestMapping("/api/itineraries")
 @Slf4j//for logger
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
 public class ItineraryController {
     private final UserRepository userRepository;
     private final ItineraryService itineraryService;
@@ -40,6 +40,8 @@ public class ItineraryController {
     @PostMapping
     public ResponseEntity<ApiResponse<ItineraryResponse>> saveItinerary(HttpServletRequest request, @RequestParam Long userId,
                                                                    @Valid @RequestBody ItineraryRequest itineraryRequest){
+
+        System.out.println("Backend called");
         try{
             String tokenUserName = getAuthenticatedUsername(request);
             if(!validateUserAccess(tokenUserName,userId)){

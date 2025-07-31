@@ -42,7 +42,7 @@ class ItineraryService{
     }
 
     async saveItinerary(itineraryData, userId){
-        const authToken = this.getAuthToken;
+        const authToken = this.getAuthToken();
         if (!authToken) {
             throw new Error('Authentication token not found. Please log in again.');
         }
@@ -93,7 +93,7 @@ class ItineraryService{
     }
 
     async getUserItineraries(userId){
-        const authToken = this.getAuthToken;
+        const authToken = this.getAuthToken();
         const currentUser = localStorage.getItem('CURRENT_USER');
         if (!currentUser) {
             throw new Error('User not logged in');
@@ -136,7 +136,7 @@ class ItineraryService{
     }
 
     async searchItineraries(userId,searchTerm){
-        const authToken = this.getAuthToken;
+        const authToken = this.getAuthToken();
         const currentUser = localStorage.getItem('CURRENT_USER');
         if (!currentUser) {
             throw new Error('User not logged in');

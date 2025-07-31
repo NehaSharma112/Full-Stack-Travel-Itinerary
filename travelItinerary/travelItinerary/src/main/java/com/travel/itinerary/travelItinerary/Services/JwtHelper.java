@@ -4,9 +4,12 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.security.KeyFactory;
@@ -28,12 +31,17 @@ public class JwtHelper {
     @Value("${jwt.public-key-path}")
     private String publicKeyPath;
 
-    @Value("{jwt.expiration}")
+    @Value("${jwt.expiration}")
     private String expiration;
 
     private PrivateKey getPrivateKey(){
         try {
-            String privateKeyContent = Files.readString(Paths.get(privateKeyPath))
+//            String privateKeyContent = Files.readString(Paths.get(privateKeyPath))
+//                    .replace("-----BEGIN PRIVATE KEY-----", "")
+//                    .replace("-----END PRIVATE KEY-----", "")
+//                    .replaceAll("\\s", "");
+            Resource resource = new ClassPathResource(privateKeyPath); // from application.properties
+            String privateKeyContent = new String(resource.getInputStream().readAllBytes(), StandardCharsets.UTF_8)
                     .replace("-----BEGIN PRIVATE KEY-----", "")
                     .replace("-----END PRIVATE KEY-----", "")
                     .replaceAll("\\s", "");
@@ -49,10 +57,16 @@ public class JwtHelper {
     }
     private PublicKey getPublicKey(){
         try{
-            String publicKeyContent = Files.readString(Paths.get(publicKeyPath))
-                    .replace("-----BEGIN PUBLIC KEY-----","")
-                    .replace("-----END PUBLIC KEY-----","")
-                    .replaceAll("\\s","");
+//            String publicKeyContent = Files.readString(Paths.get(publicKeyPath))
+//                    .replace("-----BEGIN PUBLIC KEY-----","")
+//                    .replace("-----END PUBLIC KEY-----","")
+//                    .replaceAll("\\s","");
+
+            Resource resource = new ClassPathResource(publicKeyPath); // 👈 yeh line change karo
+            String publicKeyContent = new String(resource.getInputStream().readAllBytes(), StandardCharsets.UTF_8)
+                    .replace("-----BEGIN PUBLIC KEY-----", "")
+                    .replace("-----END PUBLIC KEY-----", "")
+                    .replaceAll("\\s", "");
 
             byte[] decoded = Base64.getDecoder().decode(publicKeyContent);
             X509EncodedKeySpec keySpec = new X509EncodedKeySpec(decoded);

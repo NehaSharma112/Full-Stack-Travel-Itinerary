@@ -21,7 +21,7 @@ async function generateTripSuggestions(userInput) {
         const userPrompt = `Please provide essential travel information for:${userInput}`;
 
         const response = await callGitHubAI(`${systemPrompt}\n\nUser Request: ${userPrompt}`);
-
+        console.log(response);
         return formatTripResponse(response);
     }catch (error) {
         console.error('Error generating trip suggestions:', error);
@@ -54,7 +54,7 @@ async function formatTripResponse(response) {
 
         const backendResponse = await fetch(`${AUTH_ITINERARY_PATH}?userId=${encodeURIComponent(user.id)}`,{
             method:'POST',
-            header : {
+            headers : {
                 'Content-Type':'application/json',
                 'Authorization':`Bearer ${authToken}`,
                 'userName':user.userName
@@ -117,6 +117,12 @@ async function formatTripResponse(response) {
         return `<div class="alert alert-info">${response}</div>`;
     }
     
+}
+
+// Helper function to format semicolon-separated lists
+function formatList(text) {
+    if (!text) return 'N/A';
+    return text.split(';').map(item => `• ${item.trim()}`).join('<br>');
 }
 
 function hideAllInterfaces(){
@@ -191,6 +197,13 @@ function showLoadingState() {
             <p class="mt-2">Generating personalized travel suggestions...</p>
         </div>
     `;
+    document.getElementById('searchResults').style.display = 'block';
+    document.getElementById('searchResults').scrollIntoView({ behavior: 'smooth' });
+}
+
+//setting result to show in result div
+function showResults(content) {
+    document.getElementById('resultsContent').innerHTML = content;
     document.getElementById('searchResults').style.display = 'block';
     document.getElementById('searchResults').scrollIntoView({ behavior: 'smooth' });
 }
@@ -270,3 +283,15 @@ async function performManualSearch() {
     }
     
 }
+
+
+// Export functions for global access (if needed)
+window.travelApp = {
+    performSearch,
+    generateAISuggestions,
+    performManualSearch,
+    toggleVoiceRecording,
+    activateAISearch,
+    activateVoiceSearch,
+    activateManualSearch
+};
