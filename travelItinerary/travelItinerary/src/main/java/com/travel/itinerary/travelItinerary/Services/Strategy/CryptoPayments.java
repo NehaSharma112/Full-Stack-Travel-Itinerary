@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class CryptoPayments implements IPaymentStrategy{
 
     @Override
-    public PaymentResponse processPayment(PaymentRequest paymentRequest) {
+    public PaymentResponse processPayment(PaymentRequest paymentRequest, String userName) {
 //        log.info();
 //        return PaymentResponse.;
         return null;

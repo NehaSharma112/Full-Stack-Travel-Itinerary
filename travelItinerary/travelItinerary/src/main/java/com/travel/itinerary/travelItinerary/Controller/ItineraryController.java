@@ -29,6 +29,7 @@ public class ItineraryController {
         return (String) request.getAttribute("authenticatedUsername");
     }
 
+
     private boolean validateUserAccess(String tokenUsername, Long userId) {
         User user = userRepository.findById(userId).orElse(null);
         if (user == null) {

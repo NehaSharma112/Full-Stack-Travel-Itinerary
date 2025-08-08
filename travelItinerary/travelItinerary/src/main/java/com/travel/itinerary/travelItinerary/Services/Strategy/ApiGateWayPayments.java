@@ -13,7 +13,7 @@ public class ApiGateWayPayments implements IPaymentStrategy{
     private String stripeSecretKey;
 //  key= sk_test_51Rmi1z4EgsjNbTIPFsycnTjFLoq7QVOgPjJHc4l5iLF12AfLUaId8nONWFIyAG58w09e3u2Y7jZgBGtZHCeLFdUx00KZGhnQeq
     @Override
-    public PaymentResponse processPayment(PaymentRequest paymentRequest) {
+    public PaymentResponse processPayment(PaymentRequest paymentRequest,String userName) {
         return null;
     }
 }

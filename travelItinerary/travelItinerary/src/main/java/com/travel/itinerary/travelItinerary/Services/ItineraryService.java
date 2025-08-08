@@ -1,5 +1,6 @@
 package com.travel.itinerary.travelItinerary.Services;
 
+import com.travel.itinerary.travelItinerary.Dto.EmailRequest;
 import com.travel.itinerary.travelItinerary.Dto.ItineraryRequest;
 import com.travel.itinerary.travelItinerary.Dto.ItineraryResponse;
 import com.travel.itinerary.travelItinerary.Model.Itinerary;
@@ -20,6 +21,7 @@ public class ItineraryService {
     private final ItineraryRepository itineraryRepository;
     private final TextProcessingService textProcessingService;
     private final UserRepository userRepository;
+    private final EmailService emailService;
 
     private ItineraryResponse modelToResponse(Itinerary itinerary){
         return ItineraryResponse.builder()
@@ -95,6 +97,18 @@ public class ItineraryService {
                     return processedDestination.contains(processedItr) || processedItinerary.contains(processedItr);
                 }
         ).map(this::modelToResponse).collect(Collectors.toList());
+    }
+
+    public void sendEmail(User user, ItineraryRequest request) {
+        EmailRequest emailRequest = new EmailRequest();
+        emailRequest.setMessage("Thank you for checking your travel itinerary with us! We hope the AI-powered recommendations have helped you plan your trip.\n" +
+                "\n" +
+                "For even better support and personalized assistance, we invite you to explore our premium plans, starting at very affordable prices. With premium access, you'll enjoy priority support and exclusive features tailored to make your travel experience even more seamless.\n" +
+                "\n" +
+                "If you have any questions or need help enrolling, feel free to reach out!");
+        emailRequest.setTo(user.getEmail());
+        emailRequest.setSubject("Thank You for Checking Your Itinerary! ✨");
+        emailService.sendEmail(emailRequest);
     }
 
 
