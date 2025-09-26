@@ -128,7 +128,7 @@ const auth={
             */
 
             if(response.ok && data.data){
-                localStorage.setItem('JWT_TOKEN',data.token);
+                localStorage.setItem('JWT_TOKEN',data.data.token);
                 localStorage.setItem('CURRENT_USER',JSON.stringify({
                     id:data.data.id,
                     firstName:data.data.firstName,//userData.firstName = userData.given_name;
@@ -138,8 +138,8 @@ const auth={
                     role:data.data.role
                 }));
 
-                const normalizedUser = normalizeGoogleUser(userData);
-                await this.processGoogleUser(normalizedUser, accessToken);
+                // const normalizedUser = normalizeGoogleUser(userData);
+                // await this.processGoogleUser(normalizedUser, accessToken);
                 console.log('Google authentication successful');
                 alert('Google authentication successful!');
                 window.location.href = 'http://127.0.0.1:5500/html/home.html';

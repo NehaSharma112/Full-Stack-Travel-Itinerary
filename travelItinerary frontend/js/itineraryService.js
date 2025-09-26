@@ -1,4 +1,5 @@
-const stripe = Stripe("pk_test_51Rmi1z4EgsjNbTIPE3ZaFPJppSbayaAPkygukDzBy1sUgmUty0WOwUCvbm9bWlJTf57FEAWAoU9lw4mm7j4ZQDWE000iMbs54K");
+console.log("🚀 itineraryService.js is loading...");
+// const itineraryService = new ItineraryService();
 async function saveUserItinerary(destination,fullItinerary, options={}) {
     try{
         const currentUser = localStorage.getItem('CURRENT_USER');
@@ -135,6 +136,8 @@ class ItineraryService{
 
     }
 
+    
+
     async searchItineraries(userId,searchTerm){
         const authToken = this.getAuthToken();
         const currentUser = localStorage.getItem('CURRENT_USER');
@@ -155,7 +158,15 @@ class ItineraryService{
         if(!searchTerm || searchTerm.trim()===''){
             throw new Error('Search term is required');
         }
-        const url = `${this.baseUrl}${this.apiEndpoint}/search?userId=${encodeURIComponent(userId)}&searchTerm=${encodeURIComponent(searchTerm.trim())}`;
+        const url = `${this.baseUrl}${this.apiEndpoint}/search?userId=${encodeURIComponent(userId)}&searchItenerary=${encodeURIComponent(searchTerm.trim())}`;
+
+
+        // console.log('🔍 Debug Info:');
+        // console.log('User ID being sent:', userId);
+        // console.log('Auth token exists:', !!authToken);
+        // console.log('Username from localStorage:', userName);
+
+
 
         try{
             const response = await fetch(url,
@@ -180,12 +191,17 @@ class ItineraryService{
         }
     }
 }
+
+const itineraryService = new ItineraryService();
+console.log("✅ itineraryService created:", itineraryService);
+
+
 function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
     notification.textContent = message;
-    notification.style.cssText = `
-        position: fixed;
+    notification.style.cssText = 
+        `position: fixed;
         top: 20px;
         right: 20px;
         padding: 12px 20px;
@@ -195,8 +211,7 @@ function showNotification(message, type = 'info') {
         z-index: 1000;
         opacity: 0;
         transition: opacity 0.3s ease;
-        background-color: ${type === 'success' ? '#4CAF50' : type === 'error' ? '#f44336' : '#2196F3'};
-    `;
+        background-color: ${type === 'success' ? '#4CAF50' : type === 'error' ? '#f44336' : '#2196F3'};`;
 
     document.body.appendChild(notification);
     
@@ -212,6 +227,18 @@ function showNotification(message, type = 'info') {
     }, 3000);
 }
 
+
+//
+console.log("✅ itineraryService created:", itineraryService);
+console.log("✅ Making itineraryService global...");
+
+
+///
+window.itineraryService = itineraryService;
+window.ItineraryService = ItineraryService;
+window.saveUserItinerary = saveUserItinerary;
+console.log("✅ Global check:", typeof window.itineraryService);
+///
 
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { ItineraryService, itineraryService, saveUserItinerary };

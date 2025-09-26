@@ -275,7 +275,7 @@ async function performManualSearch() {
         const searchQuery = `Destination: ${destination}, Duration: ${duration} days, Budget: $${budget}, Style: ${style}`;
 
         try{
-            const aiResponse = generateTripSuggestions(searchQuery);
+            const aiResponse = await generateTripSuggestions(searchQuery);
             showResults(`<h4>Manual Search Results</h4><br><p><strong>Search Criteria:</strong> ${searchQuery}</p><br>${aiResponse}`);
         }catch (error) {
             showResults(`<h4>Manual Search Results</h4><br><p><strong>Search Criteria:</strong> ${searchQuery}</p><br><p>Here are some suggestions based on your criteria...</p>`);

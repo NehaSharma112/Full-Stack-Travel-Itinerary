@@ -5,8 +5,68 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8288140-ce6a-46e5-92cc-22b68b74d648" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../travelItinerary frontend/html/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/../travelItinerary frontend/html/history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../travelItinerary frontend/html/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../travelItinerary frontend/html/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../travelItinerary frontend/html/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/../travelItinerary frontend/html/payment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../travelItinerary frontend/js/itineraryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../travelItinerary frontend/js/itineraryService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../travelItinerary frontend/js/payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/../travelItinerary frontend/js/payment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../travelItinerary frontend/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/../travelItinerary frontend/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Config/MailConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Controller/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Controller/ItineraryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Controller/MailController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Controller/PaymentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Controller/ReviewController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Controller/TokenController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Dto/ApiResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Dto/AuthResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Dto/EmailRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Dto/ItineraryRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Dto/ItineraryResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Dto/LoginRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Dto/PaymentRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Dto/PaymentResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Dto/ReviewRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Dto/ReviewResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Dto/SignUpRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Dto/UserProfileRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Model/Itinerary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Model/Payment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Model/Review.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Repository/ItineraryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Repository/ReviewRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Security/JwtAuthFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Services/CustomUserDetailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Services/EmailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Services/ItineraryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Services/JwtHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Services/PaymentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Services/ReviewService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Services/Strategy/ApiGateWayPayments.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Services/Strategy/CryptoPayments.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Services/Strategy/IPaymentStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Services/Strategy/PaymentFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Services/TextProcessingService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/Services/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travel/itinerary/travelItinerary/TravelItineraryApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-sample.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/keys/private_key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/keys/public_key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/travel/itinerary/travelItinerary/TravelItineraryApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +109,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Neha/Desktop/Full Stack travel itinerary project/travelItinerary-backend&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Neha/Desktop/Full Stack travel itinerary project/travelItinerary&quot;
   }
 }</component>
   <component name="RecentsManager">

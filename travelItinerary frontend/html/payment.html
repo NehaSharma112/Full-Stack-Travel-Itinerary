@@ -186,15 +186,19 @@
                     </div>
                     <div class="card-body">
                         <div class="row">
+                            <!--  -->
+                            <input type="hidden" id="amount" name="amount" required><!--  -->
                             <div class="col-md-8">
                                 <label for="amount" class="form-label fw-semibold">Amount (Auto-set by plan)</label>
                                 <div class="input-group input-group-lg">
-                                    <span class="input-group-text">$</span>
-                                    <input type="number" class="form-control amount-input" id="amount" 
-                                           value="19.99" step="0.01" readonly required>
-                                    <div class="invalid-feedback">
-                                        Please select a subscription plan.
-                                    </div>
+                                    <span class="input-group-text" id="amountSymbol">$</span>
+                                        <!-- <input type="number" class="form-control amount-input" id="amount" 
+                                           value="19.99" step="0.01" readonly required> -->
+                                        <input type="text" class="form-control amount-input" id="amountDisplay" 
+                                            value="$19.99" readonly>
+                                        <!-- <div class="invalid-feedback">
+                                            Please select a subscription plan.
+                                        </div> -->
                                 </div>
                                 <small class="form-text text-muted">Amount is automatically set based on your selected plan</small>
                             </div>
@@ -205,6 +209,7 @@
                                     <option value="eur">EUR - Euro</option>
                                     <option value="gbp">GBP - British Pound</option>
                                     <option value="cad">CAD - Canadian Dollar</option>
+                                    <option value="inr">INR - Indian Rupee</option>
                                 </select>
                             </div>
                         </div>
@@ -262,7 +267,12 @@
                     <div class="card-body">
                         <div class="row g-3">
                             <div class="col-md-4">
-                                <div class="subscription-plan-card" data-plan="LITE" data-price="9.99">
+                                <div class="subscription-plan-card" data-plan="LITE" 
+                                    data-price-usd="9.99"
+                                    data-price-eur="8.99"
+                                    data-price-cad="13.99"
+                                    data-price-inr="999"
+                                    data-price-gbp="8.99">
                                     <div class="plan-header text-center p-3">
                                         <i class="fas fa-paper-plane text-primary mb-2" style="font-size: 2rem;"></i>
                                         <h6 class="plan-name mb-1">LITE</h6>
@@ -278,7 +288,13 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="subscription-plan-card selected" data-plan="PRO" data-price="19.99">
+                                <div class="subscription-plan-card selected" data-plan="PRO" 
+                                    data-price-usd="19.99"
+                                    data-price-eur="17.99"
+                                    data-price-cad="27.99"
+                                    data-price-inr="1999"
+                                    data-price-gbp="17.99">
+                                <!-- data-price="19.99"> -->
                                     <div class="plan-header text-center p-3">
                                         <i class="fas fa-rocket text-success mb-2" style="font-size: 2rem;"></i>
                                         <h6 class="plan-name mb-1">PRO</h6>
@@ -296,7 +312,13 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="subscription-plan-card" data-plan="PREMIUM" data-price="29.99">
+                                <div class="subscription-plan-card" data-plan="PREMIUM" 
+                                    data-price-usd="29.99"
+                                    data-price-eur="25.99"
+                                    data-price-cad="41.99"
+                                    data-price-inr="2699"
+                                    data-price-gbp="25.99">
+                                    <!-- data-price="29.99"> -->
                                     <div class="plan-header text-center p-3">
                                         <i class="fas fa-gem text-warning mb-2" style="font-size: 2rem;"></i>
                                         <h6 class="plan-name mb-1">PREMIUM</h6>
@@ -396,7 +418,7 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/auth.js"></script>
-    <script src="../js/payments.js"></script>
+    <script src="../js/payment.js"></script>
     
     <script>
         // Update user info in navigation

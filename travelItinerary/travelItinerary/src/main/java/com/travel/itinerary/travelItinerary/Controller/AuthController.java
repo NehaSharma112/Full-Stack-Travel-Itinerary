@@ -21,8 +21,7 @@ import java.util.logging.Logger;
 public class AuthController {
     private final UserService userService;
     Logger logger = Logger.getLogger(String.valueOf(AuthController.class));
-//    @Autowired
-//    UserService userService;
+
 
     @PostMapping("/signup")
     public ResponseEntity<ApiResponse<AuthResponse>> signup(@Valid @RequestBody SignUpRequest signUpRequest){

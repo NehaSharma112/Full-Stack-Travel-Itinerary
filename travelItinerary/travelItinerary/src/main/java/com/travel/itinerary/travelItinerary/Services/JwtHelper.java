@@ -62,7 +62,7 @@ public class JwtHelper {
 //                    .replace("-----END PUBLIC KEY-----","")
 //                    .replaceAll("\\s","");
 
-            Resource resource = new ClassPathResource(publicKeyPath); // 👈 yeh line change karo
+            Resource resource = new ClassPathResource(publicKeyPath);
             String publicKeyContent = new String(resource.getInputStream().readAllBytes(), StandardCharsets.UTF_8)
                     .replace("-----BEGIN PUBLIC KEY-----", "")
                     .replace("-----END PUBLIC KEY-----", "")
